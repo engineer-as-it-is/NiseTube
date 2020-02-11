@@ -1,0 +1,8 @@
+type Post @model {
+  id: ID!
+  title: String!
+  description: String
+  postedAt: AWSDateTime
+  movieUrl: String
+  sumbnailUrl: String
+}

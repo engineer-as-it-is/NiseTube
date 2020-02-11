@@ -1,0 +1,15 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-nisetube-prod-155956-authRole",
+            "UnauthRoleArn": "arn:aws:iam::175476692122:role/amplify-nisetube-prod-155956-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::175476692122:role/amplify-nisetube-prod-155956-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "amplify-nisetube-prod-155956-deployment",
+            "UnauthRoleName": "amplify-nisetube-prod-155956-unauthRole",
+            "StackName": "amplify-nisetube-prod-155956",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:175476692122:stack/amplify-nisetube-prod-155956/1d850f10-4c9c-11ea-8956-06fcc76a2472",
+            "AmplifyAppId": "dh7zds0d8yy73"
+        }
+    }
+}
