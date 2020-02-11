@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "aws-amplify": "^2.2.4",
+    "aws-amplify-vue": "^1.1.4",
     "hls.js": "^0.13.1",
     "nuxt": "^2.0.0"
   },
