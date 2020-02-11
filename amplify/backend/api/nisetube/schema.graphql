@@ -4,5 +4,8 @@ type Post @model {
   description: String
   postedAt: String
   movieUrl: String
-  sumbnailUrl: String
+  thumbnailUrl: String
+  avatarUrl: String
+  views: Int
+  channelName: String
 }

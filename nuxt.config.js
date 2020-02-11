@@ -33,7 +33,9 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~plugins/amplify-vue.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
