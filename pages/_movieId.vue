@@ -27,7 +27,7 @@
                 <v-list-item-subtitle>チャンネル登録者数　{{ movie.channel.subscribers }}人</v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
-                <v-btn color="red" >チャンネル登録</v-btn>
+                <v-btn color="red" @click="() => alert('チャンネル登録機能はメンテナンス中tyuu')">チャンネル登録</v-btn>
             </v-list-item-action>
         </v-list-item>
     </v-container>
