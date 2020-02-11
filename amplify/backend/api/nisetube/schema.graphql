@@ -2,7 +2,7 @@ type Post @model {
   id: ID!
   title: String!
   description: String
-  postedAt: AWSDateTime
+  postedAt: String
   movieUrl: String
   sumbnailUrl: String
 }
