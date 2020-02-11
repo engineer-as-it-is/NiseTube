@@ -63,7 +63,7 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-icon class="mx-4">fab fa-youtube</v-icon>
       <v-toolbar-title class="mr-12 align-center">
-        <span class="title">Youtube</span>
+        <span class="title">NiseTube</span>
       </v-toolbar-title>
       <v-spacer />
       <v-row
@@ -82,42 +82,24 @@
     </v-app-bar>
 
     <v-content>
-      <v-container class="fill-height">
-        <v-row
-          justify="center"
-          align="center"
-        >
-          <v-col class="shrink">
-            <v-tooltip right>
-              <template v-slot:activator="{ on }">
-                <v-btn
-                  :href="source"
-                  icon
-                  large
-                  target="_blank"
-                  v-on="on"
-                >
-                  <v-icon large>mdi-code-tags</v-icon>
-                </v-btn>
-              </template>
-              <span>Source</span>
-            </v-tooltip>
-            <v-tooltip right>
-              <template v-slot:activator="{ on }">
-                <v-btn
-                  icon
-                  large
-                  href="https://codepen.io/johnjleider/pen/aezMOO"
-                  target="_blank"
-                  v-on="on"
-                >
-                  <v-icon large>mdi-codepen</v-icon>
-                </v-btn>
-              </template>
-              <span>Codepen</span>
-            </v-tooltip>
-          </v-col>
-        </v-row>
+      <v-container fluid class="d-flex justify-start flex-wrap">
+        <v-card v-for="movie in movieList" :key="movie.id" class="mx-3 my-5" elevation="0" max-width="400px">
+          <v-img
+            class="white--text align-end"
+            height="200px"
+            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+          ></v-img>    
+          <v-list-item>
+            <v-list-item-avatar>
+              <v-img :src="movie.channel.avatarUrl"></v-img>
+            </v-list-item-avatar>            
+            <v-list-item-content>
+              <v-list-item-title>{{ movie.title }}</v-list-item-title>
+              <v-list-item-subtitle>{{ movie.channel.name }}</v-list-item-subtitle>
+              <v-list-item-subtitle>{{ movie.views }}回視聴・{{ movie.postedAt }}</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-card>
       </v-container>
     </v-content>
   </v-app>
@@ -144,9 +126,22 @@
         { picture: 58, text: 'Nokia' },
         { picture: 78, text: 'MKBHD' },
       ],
+      movieList: []
     }),
     created () {
       this.$vuetify.theme.dark = true
+      for(let i=0; i<10; i++) {
+        this.movieList.push(        {
+          id: `movie${i}`,
+          title: `サンプル動画${i}`,
+          channel: {
+            name: `エンジニアのリアルチャンネル${i}`,
+            avatarUrl: `https://randomuser.me/api/portraits/men/${i}.jpg`
+          },
+          views: Math.floor(Math.random() * 100000),
+          postedAt: `${i}日前`
+        })
+      }
     },
   }
 </script>
