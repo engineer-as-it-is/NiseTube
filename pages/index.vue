@@ -23,6 +23,9 @@
 </template>
 
 <script>
+import { API, graphqlOperation } from 'aws-amplify';
+import * as queries from '~/src/graphql/queries';
+
   export default {
     props: {
       source: String,
@@ -45,7 +48,7 @@
       ],
       movieList: []
     }),
-    created () {
+    async created () {
       this.$vuetify.theme.dark = true
       for(let i=0; i<10; i++) {
         this.movieList.push(        {
@@ -59,7 +62,16 @@
           postedAt: `${i}日前`
         })
       }
+      const data = await this.getAllPosts()
     },
+    methods: {
+      async getAllPosts() {
+        const allPosts = await API.graphql(graphqlOperation(queries.listPosts));
+        console.log(allPosts)
+      }
+      // Simple query
+
+    }
   }
 </script>
 

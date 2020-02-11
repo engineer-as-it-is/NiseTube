@@ -9,7 +9,10 @@ export const getPost = /* GraphQL */ `
       description
       postedAt
       movieUrl
-      sumbnailUrl
+      thumbnailUrl
+      avatarUrl
+      views
+      channelName
     }
   }
 `;
@@ -26,7 +29,10 @@ export const listPosts = /* GraphQL */ `
         description
         postedAt
         movieUrl
-        sumbnailUrl
+        thumbnailUrl
+        avatarUrl
+        views
+        channelName
       }
       nextToken
     }

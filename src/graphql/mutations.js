@@ -12,7 +12,10 @@ export const createPost = /* GraphQL */ `
       description
       postedAt
       movieUrl
-      sumbnailUrl
+      thumbnailUrl
+      avatarUrl
+      views
+      channelName
     }
   }
 `;
@@ -27,7 +30,10 @@ export const updatePost = /* GraphQL */ `
       description
       postedAt
       movieUrl
-      sumbnailUrl
+      thumbnailUrl
+      avatarUrl
+      views
+      channelName
     }
   }
 `;
@@ -42,7 +48,10 @@ export const deletePost = /* GraphQL */ `
       description
       postedAt
       movieUrl
-      sumbnailUrl
+      thumbnailUrl
+      avatarUrl
+      views
+      channelName
     }
   }
 `;
